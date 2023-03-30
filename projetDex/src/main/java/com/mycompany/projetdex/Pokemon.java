@@ -17,6 +17,7 @@ public class Pokemon {
     private String type2;
     private ArrayList<String> pokemonsSuperieurs;
     private static int nbPokemon;
+    
 
     public Pokemon(String nom, int numeroPokedex, String type1, String type2) {
         this.nom = nom;
@@ -29,7 +30,7 @@ public class Pokemon {
         this.nom = nom;
         this.numeroPokedex = numeroPokedex;
         this.type1 = type1;
-        this.type1 = "null";
+        this.type2 = "null";
         this.pokemonsSuperieurs = new ArrayList<String>();
     }
     
@@ -37,4 +38,16 @@ public class Pokemon {
     {
         this.pokemonsSuperieurs.add(s);
     }
+      public void setNom(String nom){
+       this.nom = nom;
+   }
+   public void setNumeroPokedex(int numeroPokedex){
+       this.numeroPokedex = numeroPokedex;
+   }
+   public void setType1(String type1){
+       this.type1 = type1;
+   }
+   public void setType2(String type2){
+       this.type2 = type2;
+   }
 }

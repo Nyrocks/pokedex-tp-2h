@@ -22,5 +22,9 @@ public class Version {
     {
         this.listeStarter.add(p);
     }
+    public void removePokemon(Pokemon p)
+    {
+        this.listeStarter.remove(p);
+    }
     
 }

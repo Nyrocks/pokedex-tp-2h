@@ -99,10 +99,120 @@ public class ProjetDex {
 
             int choix = scanner.nextInt();
             scanner.nextLine(); // consomme le retour chariot
+            String nomPokemon = scanner.next();
+            String suppr = scanner.next();
+            int numeroPokedex = scanner.nextInt();
+            String typePokemon = scanner.next();
 
             switch (choix) {
                 case 1:
-                    // ajouterPokemon(); 
+                  System.out.println("à quel version voulez vous l'ajouter ? : ");
+                  System.out.println("1. Emeraude Rouge");
+                  System.out.println("2. Rubis rugby");
+                  System.out.println("3. Saphir Sonic");
+                  System.out.println("4. Platine Bleu");
+                  System.out.println("5. Giga Chen");
+                  choix = scanner.nextInt();
+                  if (choix == 1){
+                      System.out.println("Les 3 starters actuelles sont : \n"
+                                        +"Salamèche\n"
+                                        +"Machoc\n"
+                                        +"Pikachu\n");
+                      System.out.println("Lequel voulez vous supprimer ? ");
+                      System.out.println(suppr);
+                      if (suppr == "Salameche"){
+                        EmeraudeRouge.removePokemon(salameche);
+                      }
+                      if (suppr == "Machoc"){
+                        EmeraudeRouge.removePokemon(machoc);
+                      }
+                      if (suppr == "Pikachu"){
+                        EmeraudeRouge.removePokemon(pikachu);
+                      }  
+                      System.out.println("Quel pokemon voulez vous ajouter ? : ");
+                      pokemons.get(1).setNom(nomPokemon);
+                      System.out.println("Quel est son numéro de pokedex ? : ");
+                      pokemons.get(1).setNumeroPokedex(numeroPokedex);
+                      System.out.println("Quel est son type ? : ");
+                      pokemons.get(1).setType1(typePokemon);
+                      System.out.println("Un deuxième type ? : ");
+                      EmeraudeRouge.addPokemon(nomPokemon);
+                  }
+                  if (choix == 2){
+                      System.out.println("Les 3 starters actuelles sont : "
+                                        +"Carapuche\n"
+                                        +"Gobu\n"
+                                        +"Abo\n");    
+                      System.out.println("Lequel voulez vous supprimer ? ");
+                        if (suppr == "carapuce"){
+                            RubisRugby.removePokemon(carapuce);
+                        }
+                        if (suppr == "gobou"){
+                           RubisRugby.removePokemon(gobou);
+                       }
+                        if (suppr == "abo"){
+                            RubisRugby.removePokemon(abo);
+                        }
+                      System.out.println("Quel pokemon voulez vous ajouter ? : ");
+                      System.out.println(nomPokemon);
+                  }
+                  if (choix == 3){
+                      System.out.println("Les 3 starters actuelles sont : "
+                                        +"Stalgamin\n"
+                                        +"Tarsal\n"
+                                        +"Goupix\n");
+                      System.out.println("Lequel voulez vous supprimer ? ");
+                       if (suppr == "Stalgamin"){
+                            SaphirSonic.removePokemon(stalgamin);
+                        }
+                        if (suppr == "Tarsal"){
+                           RubisRugby.removePokemon(tarsal);
+                       }
+                        if (suppr == "Goupix"){
+                            RubisRugby.removePokemon(goupix);
+                        }
+                      System.out.println("Quel pokemon voulez vous ajouter ? : ");
+                      System.out.println(nomPokemon);
+                  }
+                  if (choix == 4 ){
+                      System.out.println("Les 3 starters actuelles sont : "
+                                        +"Ptitard\n"
+                                        +"Stari\n"
+                                        +"Bulbizarre\n");
+                      System.out.println("Lequel voulez vous supprimer ? ");
+                       if (suppr == "Ptitard"){
+                            PlatineBleu.removePokemon(ptitard);
+                        }
+                        if (suppr == "Stari"){
+                           PlatineBleu.removePokemon(stari);
+                       }
+                        if (suppr == "Bulbizarre"){
+                            PlatineBleu.removePokemon(bulbizarre);
+                        }
+                      System.out.println("Quel pokemon voulez vous ajouter ? : ");
+                      System.out.println(nomPokemon);
+                  }
+                  if (choix == 5){
+                      System.out.println("Les 3 starters actuelles sont : "
+                                        +"Racaillou\n"
+                                        +"Phantominus\n"
+                                        +"Abra\n");
+                     System.out.println("Lequel voulez vous supprimer ? ");
+                      if (suppr == "Racaillou"){
+                            GigaChen.removePokemon(racaillou);
+                        }
+                        if (suppr == "Fantominus"){
+                           GigaChen.removePokemon(fantominus);
+                       }
+                        if (suppr == "Abra"){
+                            GigaChen.removePokemon(abra);
+                        }
+                      System.out.println("Quel pokemon voulez vous ajouter ? : ");
+                      System.out.println(nomPokemon);
+                  } 
+                  if (choix > 5){
+                      System.out.println("erreur de saisi le maximum que vous pouvez taper est le chifre 5 ");
+                  }
                     break;
                 case 2:
                     // afficherStarters();
